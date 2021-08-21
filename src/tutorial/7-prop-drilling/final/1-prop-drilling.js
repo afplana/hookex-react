@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { data } from '../../../data';
+import React, { useState } from "react";
+import { data } from "../../../data";
 // more components
 // fix - context api, redux (for more complex cases)
 
@@ -10,6 +10,7 @@ const PropDrilling = () => {
       return people.filter((person) => person.id !== id);
     });
   };
+
   return (
     <section>
       <h3>prop drilling</h3>
@@ -36,7 +37,7 @@ const List = ({ people, removePerson }) => {
 
 const SinglePerson = ({ id, name, removePerson }) => {
   return (
-    <div className='item'>
+    <div className="item">
       <h4>{name}</h4>
       <button onClick={() => removePerson(id)}>remove</button>
     </div>
